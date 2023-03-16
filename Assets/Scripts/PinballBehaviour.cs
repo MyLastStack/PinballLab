@@ -6,7 +6,7 @@ public class PinballBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject Pinball;
     public int RoundsLeft;
-    public Vector3 respawnCheck = new Vector3(0, 5, 0);
+    public Vector3 respawnCheck = new Vector3(0, 4, 0);
 
     // Start is called before the first frame update
     void Start()
