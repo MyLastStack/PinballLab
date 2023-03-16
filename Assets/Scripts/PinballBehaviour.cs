@@ -8,7 +8,7 @@ public class PinballBehaviour : MonoBehaviour
     Rigidbody2D rb;
     float maxSpeed = 10f;
     public int RoundsLeft;
-    public Vector3 respawnCheck = new Vector3(0, 4, 0);
+    public Vector3 respawnCheck = new Vector3(2.5f, -1f, 0);
 
     // Start is called before the first frame update
     void Start()
