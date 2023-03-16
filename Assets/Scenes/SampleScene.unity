@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 210228439}
   - component: {fileID: 210228438}
   - component: {fileID: 210228437}
+  - component: {fileID: 210228440}
   m_Layer: 0
   m_Name: DeathZone
   m_TagString: DeathZone
@@ -222,13 +223,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210228436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 6, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &210228440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210228436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910bc52775fecb64eaa490e3ad4e69c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,6 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pinball: {fileID: 1003143619}
   RoundsLeft: 0
+  shadowRealmed: 0
 --- !u!1001 &1050243272
 PrefabInstance:
   m_ObjectHideFlags: 0
