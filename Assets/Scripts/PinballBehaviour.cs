@@ -18,16 +18,7 @@ public class PinballBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Respawn();
-    }
-
-    void Respawn()
-    {
-        if (shadowRealmed && RoundsLeft != 0)
-        {
-            Instantiate(Pinball, new Vector3(0f, 5f, 0f), Quaternion.identity);
-            shadowRealmed = false;
-        }
+        
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,6 +27,12 @@ public class PinballBehaviour : MonoBehaviour
             Destroy(this.gameObject);
             RoundsLeft--;
             shadowRealmed = true;
+        }
+
+        if (shadowRealmed && RoundsLeft != 0)
+        {
+            Instantiate(Pinball, new Vector3(0f, 5f, 0f), Quaternion.identity);
+            shadowRealmed = false;
         }
     }
 }
