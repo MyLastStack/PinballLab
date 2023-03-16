@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 210228438}
   - component: {fileID: 210228437}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: DeathZone
+  m_TagString: DeathZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &210228438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 1003143623}
   - component: {fileID: 1003143624}
   m_Layer: 0
-  m_Name: Pinball
+  m_Name: Eli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -585,7 +585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003143619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15029262, y: 4.4, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -670,6 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c009888c257d71488a325c664bc2f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pinball: {fileID: 1003143619}
   RoundsLeft: 0
 --- !u!1001 &1050243272
 PrefabInstance:
