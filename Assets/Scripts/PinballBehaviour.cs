@@ -6,33 +6,31 @@ public class PinballBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject Pinball;
     public int RoundsLeft;
-    public bool shadowRealmed;
+    public Vector3 respawnCheck = new Vector3(0, 5, 0);
 
     // Start is called before the first frame update
     void Start()
     {
         RoundsLeft = 3;
-        shadowRealmed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    private void OnCollisionEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("DeathZone"))
         {
-            Destroy(this.gameObject);
             RoundsLeft--;
-            shadowRealmed = true;
-        }
-
-        if (shadowRealmed && RoundsLeft != 0)
-        {
-            Instantiate(Pinball, new Vector3(0f, 5f, 0f), Quaternion.identity);
-            shadowRealmed = false;
+            if (RoundsLeft == 0)
+            {
+                Destroy(this.gameObject);
+            }
+            Pinball.transform.position = respawnCheck;
         }
     }
 }
