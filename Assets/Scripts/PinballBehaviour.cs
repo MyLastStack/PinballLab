@@ -6,7 +6,7 @@ public class PinballBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject Pinball;
     public int RoundsLeft;
-    private bool shadowRealmed;
+    public bool shadowRealmed;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +33,9 @@ public class PinballBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("DeathZone"))
         {
+            Destroy(this.gameObject);
             RoundsLeft--;
             shadowRealmed = true;
-            Destroy(this.gameObject);
         }
     }
 }
