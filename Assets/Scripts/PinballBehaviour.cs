@@ -6,7 +6,7 @@ public class PinballBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject Pinball;
     Rigidbody2D rb;
-    float maxSpeed = 5f;
+    float maxSpeed = 10f;
     public int RoundsLeft;
     public Vector3 respawnCheck = new Vector3(0, 4, 0);
 
@@ -41,6 +41,8 @@ public class PinballBehaviour : MonoBehaviour
                 Destroy(this.gameObject);
             }
             Pinball.transform.position = respawnCheck;
+            rb.velocity = Vector2.zero;
+            rb.rotation = 0;
         }
     }
 }
