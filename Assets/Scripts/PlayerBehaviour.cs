@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    PaddleBehaviour leftPaddle;
-    PaddleBehaviour rightPaddle;
-    PlungerBehaviour plunger;
+    [SerializeField] PaddleBehaviour leftPaddle;
+    [SerializeField] PaddleBehaviour rightPaddle;
+    [SerializeField] PlungerBehaviour plunger;
 
     [SerializeField] InputAction useLeft;
     [SerializeField] InputAction useRight;
