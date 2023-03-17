@@ -20,11 +20,6 @@ public class PinballBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpeedCheck();
-    }
-    
-    void SpeedCheck()
-    {
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity.Normalize();
