@@ -35,6 +35,8 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        leftPaddle.Flip(useLeft.IsPressed());
+        rightPaddle.Flip(useRight.IsPressed());
+        //plunger.Pull(pullPlunger.ReadValue<float>);
     }
 }
