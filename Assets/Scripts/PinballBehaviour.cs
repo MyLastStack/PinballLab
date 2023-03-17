@@ -20,11 +20,7 @@ public class PinballBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.magnitude > maxSpeed)
-        {
-            rb.velocity.Normalize();
-            rb.velocity *= maxSpeed;
-        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
