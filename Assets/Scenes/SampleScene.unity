@@ -875,6 +875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776316226}
   - component: {fileID: 776316227}
+  - component: {fileID: 776316228}
   m_Layer: 7
   m_Name: PlungerAnchor
   m_TagString: Untagged
@@ -918,6 +919,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!231 &776316228
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776316225}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 923546910}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0.09054351}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.005
+  m_DampingRatio: 0
+  m_Frequency: 6
 --- !u!1 &802864445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,8 +1434,8 @@ MonoBehaviour:
   plunger: {fileID: 923546912}
   useLeft:
     m_Name: Use Left
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: 2bfa641f-713b-48b4-8dea-5f8b49a257f2
     m_Processors: 
     m_Interactions: 
@@ -1430,8 +1451,8 @@ MonoBehaviour:
     m_Flags: 0
   useRight:
     m_Name: Use Right
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: 1d83ee99-6d41-4086-812d-2edb06db333d
     m_Processors: 
     m_Interactions: 
@@ -1448,7 +1469,7 @@ MonoBehaviour:
   usePlunger:
     m_Name: Use Plunger
     m_Type: 0
-    m_ExpectedControlType: 
+    m_ExpectedControlType: Button
     m_Id: 086121b5-8e58-4c0e-928d-ac99cc3e909b
     m_Processors: 
     m_Interactions: 
