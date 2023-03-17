@@ -128,11 +128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7230136664199659935, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
   m_PrefabInstance: {fileID: 2069731134}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &224646465 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7230136664199659933, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
-  m_PrefabInstance: {fileID: 2069731134}
-  m_PrefabAsset: {fileID: 0}
 --- !u!233 &224646467
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -143,10 +138,10 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 224646465}
+  m_ConnectedRigidBody: {fileID: 1749676650}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -1.5, y: 0}
   m_ConnectedAnchor: {x: -1.5000001, y: 0}
   m_UseMotor: 0
@@ -298,11 +293,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7230136664199659935, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
   m_PrefabInstance: {fileID: 1050243272}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &385122628 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7230136664199659933, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
-  m_PrefabInstance: {fileID: 1050243272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!233 &385122630
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -313,12 +303,12 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 385122628}
+  m_ConnectedRigidBody: {fileID: 1352587613}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -1.5, y: 0}
-  m_ConnectedAnchor: {x: -1.5000001, y: -0}
+  m_ConnectedAnchor: {x: -1.5, y: -0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: -1000
@@ -1214,11 +1204,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7230136664199659934, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_LocalScale.x
@@ -1367,6 +1361,11 @@ PolygonCollider2D:
       - {x: -1.2773438, y: -0.5}
       - {x: -0.50390625, y: -0.4296875}
       - {x: -0.40234375, y: -0.421875}
+--- !u!50 &1352587613 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7230136663592376527, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+  m_PrefabInstance: {fileID: 1050243272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1352587615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,7 +1378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e1f3209446dad4085ff35112098188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hinge: {fileID: 0}
+  hinge: {fileID: 385122630}
 --- !u!1 &1370196095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,6 +1885,11 @@ PolygonCollider2D:
       - {x: -1.2773438, y: -0.5}
       - {x: -0.50390625, y: -0.4296875}
       - {x: -0.40234375, y: -0.421875}
+--- !u!50 &1749676650 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7230136663592376527, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+  m_PrefabInstance: {fileID: 2069731134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1749676652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1898,7 +1902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e1f3209446dad4085ff35112098188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hinge: {fileID: 0}
+  hinge: {fileID: 224646467}
 --- !u!1 &1850632597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2079,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850632598}
     m_Modifications:
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7230136664199659934, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
