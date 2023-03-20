@@ -875,7 +875,6 @@ GameObject:
   m_Component:
   - component: {fileID: 776316226}
   - component: {fileID: 776316227}
-  - component: {fileID: 776316228}
   m_Layer: 7
   m_Name: PlungerAnchor
   m_TagString: Untagged
@@ -919,26 +918,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!231 &776316228
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776316225}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 923546910}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0.09054351}
-  m_AutoConfigureDistance: 0
-  m_Distance: 0.005
-  m_DampingRatio: 0
-  m_Frequency: 6
 --- !u!1 &802864445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891277364}
+  - component: {fileID: 891277365}
   m_Layer: 8
   m_Name: PlungerWalls
   m_TagString: Untagged
@@ -1041,6 +1021,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &891277365
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891277363}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &909656217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7230136665258289321, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
@@ -1075,7 +1076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923546906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.239, y: -1.56, z: 0}
+  m_LocalPosition: {x: 0.239, y: -1.32, z: 0}
   m_LocalScale: {x: 0.838, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1153,7 +1154,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.005
   m_DampingRatio: 0
-  m_Frequency: 6
+  m_Frequency: 8
 --- !u!50 &923546910
 Rigidbody2D:
   serializedVersion: 4
@@ -1216,7 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fcf6dac5985dd47922c3d41273ad11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plungerSlider: {fileID: 776316228}
+  plungerSlider: {fileID: 923546909}
 --- !u!1001 &1050243272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1485,7 +1486,7 @@ MonoBehaviour:
   pullPlunger:
     m_Name: Pull Plunger
     m_Type: 0
-    m_ExpectedControlType: Analog
+    m_ExpectedControlType: Vector2
     m_Id: b90b9552-f710-47d8-a831-76384092c998
     m_Processors: 
     m_Interactions: 
@@ -1493,12 +1494,13 @@ MonoBehaviour:
     - m_Name: 
       m_Id: bfd0c916-d7c1-4d33-9ae9-f2541987c907
       m_Path: <Keyboard>/space
-      m_Interactions: Hold
-      m_Processors: Scale(factor=-1)
+      m_Interactions: 
+      m_Processors: 
       m_Groups: 
       m_Action: Pull Plunger
       m_Flags: 0
     m_Flags: 0
+  plungerSTR: 0
 --- !u!1 &1469506653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529175868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: -1.37, z: 0}
+  m_LocalPosition: {x: 2.48, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2432,6 +2434,10 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5401404558919534076, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2450,7 +2456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_LocalPosition.y
