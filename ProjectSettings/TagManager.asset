@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeathZone
   - Pinball
+  - Paddles
   layers:
   - Default
   - TransparentFX
