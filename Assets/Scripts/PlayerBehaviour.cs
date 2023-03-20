@@ -14,7 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         useLeft.Enable();
         useRight.Enable();
-        //pullPlunger.Enable();
+        pullPlunger.Enable();
     }
     private void OnDisable()
     {
