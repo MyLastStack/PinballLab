@@ -146,12 +146,12 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: -1.5000001, y: 0}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: -1000
+    m_MotorSpeed: 1000
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -30
-    m_UpperAngle: 30
+    m_LowerAngle: 30
+    m_UpperAngle: -30
 --- !u!1 &370105676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,14 +1448,14 @@ MonoBehaviour:
   rightPaddle: {fileID: 1352587615}
   useLeft:
     m_Name: Use Left
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: d44b273a-466f-4e42-a230-1beab114cd7e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 6dbd184a-7562-49db-94f9-0c5717a9a9f2
+      m_Id: 2b72e89b-072c-40fe-86c3-31d9557fc3a5
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
@@ -1465,8 +1465,8 @@ MonoBehaviour:
     m_Flags: 0
   useRight:
     m_Name: Use Right
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: 51acab5c-0191-4f62-8928-cda68a7435a5
     m_Processors: 
     m_Interactions: 
@@ -2089,6 +2089,18 @@ PrefabInstance:
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor

@@ -14,7 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         useLeft.Enable();
         useRight.Enable();
-        pullPlunger.Enable();
+        //pullPlunger.Enable();
     }
     private void OnDisable()
     {
@@ -31,6 +31,10 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         leftPaddle.Flip(useLeft.IsPressed());
+        if (useLeft.IsPressed())
+        {
+            Debug.Log("A");
+        }
         rightPaddle.Flip(useRight.IsPressed());
         plunger.Pull(pullPlunger.ReadValue<float>());
     }
