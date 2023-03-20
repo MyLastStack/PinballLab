@@ -7,6 +7,7 @@ TagManager:
   - DeathZone
   - Pinball
   - Paddles
+  - Bumpers
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Plunger
   - PlungerWalls
   - Paddles
-  - 
+  - Bumpers
   - 
   - 
   - 
