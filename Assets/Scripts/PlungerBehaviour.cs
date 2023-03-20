@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlungerBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] SpringJoint2D plungerSlider;
+    public void Pull(float amount)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        plungerSlider.distance = amount * -12f;
+        plungerSlider.attachedRigidbody.AddForce(Vector2.down * amount * 16);
     }
 }
