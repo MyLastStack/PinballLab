@@ -311,12 +311,12 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: -1.5, y: -0}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 1000
+    m_MotorSpeed: -1000
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: 30
-    m_UpperAngle: -30
+    m_LowerAngle: -30
+    m_UpperAngle: 30
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,15 +1264,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_Motor.m_MotorSpeed
-      value: 1000
+      value: -1000
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_AngleLimits.m_LowerAngle
-      value: 30
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_AngleLimits.m_UpperAngle
-      value: -30
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
@@ -2501,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534076, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_RootOrder
@@ -2521,11 +2521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.39
+      value: 2.47
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 5401404558919534079, guid: 3b6240023e4f2694698ec6b49b3965e6, type: 3}
       propertyPath: m_LocalPosition.z

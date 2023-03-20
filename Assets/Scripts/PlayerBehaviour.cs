@@ -33,7 +33,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         leftPaddle.Flip(useLeft.IsPressed());
-        ////rightPaddle.Flip(useRight.IsPressed());
+        rightPaddle.Flip(useRight.IsPressed());
         //PlungerPull(pullPlunger.IsPressed());
         if (pullPlunger.IsPressed())
         {
