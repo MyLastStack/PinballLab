@@ -6,33 +6,35 @@ public class PaddleBehaviour : MonoBehaviour
 {
     [SerializeField] HingeJoint2D hinge;
     SpriteRenderer spriteRenderer;
+    public float timer;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.material.color = Color.white;
+        timer = 0;
     }
 
-    //private void Update()
-    //{
-    //    Flip(Keyboard.current.spaceKey.isPressed);
-    //}
     public void Flip(bool isPressed)
     {
         hinge.useMotor = isPressed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        float timer = 0;
         if (collision.transform.tag == "Pinball")
         {
             timer = 10f;
         }
 
-        while (timer != 0)
+        if (timer > 0)
         {
+            spriteRenderer.material.color = Color.red;
             Debug.Log(timer);
             timer -= Time.deltaTime;
+        }
+        else
+        {
+            spriteRenderer.material.color = Color.white;
         }
     }
 }
