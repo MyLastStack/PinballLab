@@ -935,8 +935,8 @@ SpringJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 0.005
+  m_AutoConfigureDistance: 1
+  m_Distance: 1.1000001
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!1 &802864445
@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fcf6dac5985dd47922c3d41273ad11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plungerSlider: {fileID: 923546909}
+  plungerSlider: {fileID: 776316228}
 --- !u!1001 &1050243272
 PrefabInstance:
   m_ObjectHideFlags: 0
