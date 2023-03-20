@@ -311,12 +311,12 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: -1.5, y: -0}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: -1000
+    m_MotorSpeed: 1000
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -30
-    m_UpperAngle: 30
+    m_LowerAngle: 30
+    m_UpperAngle: -30
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,12 +1247,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1850632598}
     m_Modifications:
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_UseMotor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7230136663592376520, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
