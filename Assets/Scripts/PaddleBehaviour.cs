@@ -16,15 +16,15 @@ public class PaddleBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (timer > 0)
-        {
-            spriteRenderer.material.color = Color.red;
-            timer -= Time.deltaTime;
-        }
-        else
-        {
-            spriteRenderer.material.color = Color.white;
-        }
+        //if (timer > 0)
+        //{
+        //    spriteRenderer.material.color = Color.red;
+        //    timer -= Time.deltaTime;
+        //}
+        //else
+        //{
+        //    spriteRenderer.material.color = Color.white;
+        //}
     }
 
     public void Flip(bool isPressed)
@@ -32,11 +32,11 @@ public class PaddleBehaviour : MonoBehaviour
         hinge.useMotor = isPressed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Pinball")
-        {
-            timer = 0.5f;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.transform.tag == "Pinball")
+    //    {
+    //        timer = 0.5f;
+    //    }
+    //}
 }

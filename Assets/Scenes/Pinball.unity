@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 541580904}
   - component: {fileID: 541580903}
   - component: {fileID: 541580902}
+  - component: {fileID: 541580906}
   m_Layer: 0
   m_Name: smol
   m_TagString: Untagged
@@ -968,6 +969,20 @@ Transform:
   m_Father: {fileID: 1313878721}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541580906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541580901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a1f939a70211c4191ccc2a80a44c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumper: {fileID: 0}
+  pointsGained: 10
 --- !u!1 &582459076
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1313878721}
+  - component: {fileID: 1313878722}
   m_Layer: 0
   m_Name: BumperPoints
   m_TagString: Untagged
@@ -2176,6 +2192,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313878722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313878720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db11211e2f9eb1645a544910e3efc592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Points: 0
 --- !u!1 &1352587605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7230136663592376523, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
