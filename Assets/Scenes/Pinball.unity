@@ -875,6 +875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776316226}
   - component: {fileID: 776316227}
+  - component: {fileID: 776316228}
   m_Layer: 7
   m_Name: PlungerAnchor
   m_TagString: Untagged
@@ -918,6 +919,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!231 &776316228
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776316225}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 923546910}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.005
+  m_DampingRatio: 0
+  m_Frequency: 1
 --- !u!1 &802864445
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,7 +1019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891277364}
   - component: {fileID: 891277365}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PlungerWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1175,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.005
   m_DampingRatio: 0
-  m_Frequency: 8
+  m_Frequency: 6
 --- !u!50 &923546910
 Rigidbody2D:
   serializedVersion: 4
@@ -1486,21 +1507,45 @@ MonoBehaviour:
   pullPlunger:
     m_Name: Pull Plunger
     m_Type: 0
-    m_ExpectedControlType: Vector2
+    m_ExpectedControlType: Axis
     m_Id: b90b9552-f710-47d8-a831-76384092c998
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: bfd0c916-d7c1-4d33-9ae9-f2541987c907
-      m_Path: <Keyboard>/space
+    - m_Name: Two Modifiers
+      m_Id: 7c5d9774-c8ee-4d13-b983-271dc0776585
+      m_Path: TwoModifiers
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Pull Plunger
-      m_Flags: 0
+      m_Flags: 4
+    - m_Name: modifier1
+      m_Id: b14840ca-170e-4c90-8b31-f3633abba17e
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pull Plunger
+      m_Flags: 8
+    - m_Name: modifier2
+      m_Id: bc5659a7-6951-498a-bf1b-94dc4242f473
+      m_Path: <Mouse>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pull Plunger
+      m_Flags: 8
+    - m_Name: binding
+      m_Id: 181089a0-e38c-49e9-aa62-afd63b6fd3d3
+      m_Path: <Mouse>/position/y
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pull Plunger
+      m_Flags: 8
     m_Flags: 0
-  plungerSTR: 0
+  pullSTR: 0
 --- !u!1 &1469506653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529175869}
   - component: {fileID: 1529175870}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1640,7 +1685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529175868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: -1.72, z: 0}
+  m_LocalPosition: {x: 2.48, y: -1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
