@@ -31,10 +31,6 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         leftPaddle.Flip(useLeft.IsPressed());
-        if (useLeft.IsPressed())
-        {
-            Debug.Log("A");
-        }
         rightPaddle.Flip(useRight.IsPressed());
         plunger.Pull(pullPlunger.ReadValue<float>());
     }

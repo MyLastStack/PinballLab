@@ -1216,6 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fcf6dac5985dd47922c3d41273ad11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plungerSlider: {fileID: 776316228}
 --- !u!1001 &1050243272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1446,6 +1447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPaddle: {fileID: 1749676652}
   rightPaddle: {fileID: 1352587615}
+  plunger: {fileID: 923546912}
   useLeft:
     m_Name: Use Left
     m_Type: 1
@@ -1478,6 +1480,23 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Use Right
+      m_Flags: 0
+    m_Flags: 0
+  pullPlunger:
+    m_Name: Pull Plunger
+    m_Type: 0
+    m_ExpectedControlType: Analog
+    m_Id: b90b9552-f710-47d8-a831-76384092c998
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: bfd0c916-d7c1-4d33-9ae9-f2541987c907
+      m_Path: <Keyboard>/space
+      m_Interactions: Hold
+      m_Processors: Scale(factor=-1)
+      m_Groups: 
+      m_Action: Pull Plunger
       m_Flags: 0
     m_Flags: 0
 --- !u!1 &1469506653
