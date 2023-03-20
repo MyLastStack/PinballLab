@@ -10,6 +10,8 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] InputAction useLeft;
     [SerializeField] InputAction useRight;
     [SerializeField] InputAction pullPlunger;
+
+    public float plungerSTR = 0;
     private void OnEnable()
     {
         useLeft.Enable();
@@ -32,6 +34,20 @@ public class PlayerBehaviour : MonoBehaviour
     {
         leftPaddle.Flip(useLeft.IsPressed());
         rightPaddle.Flip(useRight.IsPressed());
-        plunger.Pull(pullPlunger.ReadValue<float>());
+        PlungerPull();
+    }
+
+    void PlungerPull()
+    {
+        if (pullPlunger.IsPressed())
+        {
+            plungerSTR++;
+            Debug.Log(plungerSTR);
+            if (!pullPlunger.IsPressed() || plungerSTR == 1000)
+            {
+                plunger.Pull(plungerSTR / 100);
+                plungerSTR = 0;
+            }
+        }
     }
 }
