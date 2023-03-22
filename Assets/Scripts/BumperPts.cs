@@ -50,8 +50,9 @@ public class BumperPts : MonoBehaviour
     {
         if (collision.transform.tag == "Pinball" && stateofBumper == StateofBumper.open)
         {
-            pointsHolder.Points += pointsGained;
-            stateofBumper = StateofBumper.close;
+            //pointsHolder.Points += pointsGained;
+            //stateofBumper = StateofBumper.close;
+
         }
     }
 }

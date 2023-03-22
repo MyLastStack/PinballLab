@@ -8,6 +8,7 @@ TagManager:
   - Pinball
   - Paddles
   - Bumpers
+  - Kickout
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - PlungerWalls
   - Paddles
   - Bumpers
-  - 
-  - 
+  - Pinball
+  - KOHole
   - 
   - 
   - 
