@@ -48,3 +48,4 @@ public class PlayerBehaviour : MonoBehaviour
 
         plunger.Pull(pullPlunger.ReadValue<float>());
     }
+}

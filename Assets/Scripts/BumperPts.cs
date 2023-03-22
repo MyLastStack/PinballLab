@@ -17,11 +17,15 @@ public class BumperPts : MonoBehaviour
     StateofBumper stateofBumper;
 
     public float timer;
+
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         stateofBumper = StateofBumper.open;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spriteRenderer.material.color = 
     }
 
     // Update is called once per frame
