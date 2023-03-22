@@ -34,21 +34,17 @@ public class PlayerBehaviour : MonoBehaviour
     {
         leftPaddle.Flip(useLeft.IsPressed());
         rightPaddle.Flip(useRight.IsPressed());
-        //PlungerPull(pullPlunger.IsPressed());
-        if (pullPlunger.ReadValue<float>() > 0)
-        {
-            pullSTR = pullPlunger.ReadValue<float>() * -1;
-        }
-        plunger.Pull(pullSTR / 300);
-        pullSTR= 0;
-    }
 
-    //void PlungerPull(bool ToF)
-    //{
-    //    //if (pullPlunger.ReadValue<float>() > 0)
-    //    //{
-    //    //    pullSTR = pullPlunger.ReadValue<float>() * -1;
-    //    //}
-    //    plunger.Pull(pullSTR / 300);
-    //}
-}
+        #region used mouse coordinates
+        // did this to understand how inputAction values worked
+        //PlungerPull(pullPlunger.IsPressed());
+        //if (pullPlunger.ReadValue<float>() > 0)
+        //{
+        //    pullSTR = pullPlunger.ReadValue<float>() * -1;
+        //}
+        //plunger.Pull(pullSTR / 300);
+        //pullSTR= 0;
+        #endregion
+
+        plunger.Pull(pullPlunger.ReadValue<float>());
+    }

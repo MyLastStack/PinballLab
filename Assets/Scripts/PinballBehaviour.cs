@@ -57,6 +57,10 @@ public class PinballBehaviour : MonoBehaviour
             }
             Pinball.transform.position = respawnCheck;
         }
+        if (collision.transform.tag == "Bumper")
+        {
+            
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

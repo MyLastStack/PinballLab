@@ -20,9 +20,6 @@ public class BumperPts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointsHolder = GetComponent<PointsHolder>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.material.color = Color.white;
         timer = 0;
         stateofBumper = StateofBumper.open;
     }
@@ -52,7 +49,6 @@ public class BumperPts : MonoBehaviour
         {
             //pointsHolder.Points += pointsGained;
             //stateofBumper = StateofBumper.close;
-
         }
     }
 }

@@ -215,7 +215,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 112805460}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0df82515ce1f2b1468e17d5edb2f8530, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -727,7 +727,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 533550131}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0df82515ce1f2b1468e17d5edb2f8530, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2670,35 +2670,19 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: Two Modifiers
+    - m_Name: 1D Axis
       m_Id: 7c5d9774-c8ee-4d13-b983-271dc0776585
-      m_Path: TwoModifiers
-      m_Interactions: 
+      m_Path: 1DAxis(minValue=-4)
+      m_Interactions: Hold
       m_Processors: 
       m_Groups: 
       m_Action: Pull Plunger
       m_Flags: 4
-    - m_Name: modifier1
+    - m_Name: Negative
       m_Id: b14840ca-170e-4c90-8b31-f3633abba17e
-      m_Path: <Mouse>/leftButton
+      m_Path: <Keyboard>/downArrow
       m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Pull Plunger
-      m_Flags: 8
-    - m_Name: modifier2
-      m_Id: bc5659a7-6951-498a-bf1b-94dc4242f473
-      m_Path: <Mouse>/press
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Pull Plunger
-      m_Flags: 8
-    - m_Name: binding
-      m_Id: 181089a0-e38c-49e9-aa62-afd63b6fd3d3
-      m_Path: <Mouse>/position/y
-      m_Interactions: 
-      m_Processors: 
+      m_Processors: Scale(factor=-1)
       m_Groups: 
       m_Action: Pull Plunger
       m_Flags: 8
@@ -3102,6 +3086,7 @@ GameObject:
   - component: {fileID: 1529675633}
   - component: {fileID: 1529675632}
   - component: {fileID: 1529675631}
+  - component: {fileID: 1529675634}
   m_Layer: 0
   m_Name: Large
   m_TagString: Untagged
@@ -3133,7 +3118,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1529675629}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0df82515ce1f2b1468e17d5edb2f8530, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3242,6 +3227,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1529675634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529675629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a1f939a70211c4191ccc2a80a44c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsGained: 5
+  timer: 0
 --- !u!4 &1558920870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7230136665258289321, guid: 276f8296ea0b7354badaef8bddd70816, type: 3}
