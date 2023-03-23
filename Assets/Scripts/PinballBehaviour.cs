@@ -6,7 +6,6 @@ public class PinballBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject Pinball;
     Rigidbody2D rb;
-    float maxSpeed = 10f;
     public int RoundsLeft;
     public Vector3 respawnCheck;
     public Vector3 koHole;
@@ -35,7 +34,6 @@ public class PinballBehaviour : MonoBehaviour
         {
             rb.isKinematic = true;
             Pinball.transform.position = koHole;
-            Debug.Log(timer);
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
@@ -54,6 +52,7 @@ public class PinballBehaviour : MonoBehaviour
             if (RoundsLeft == 0)
             {
                 Destroy(this.gameObject);
+                GameSceneManager.LoadResults();
             }
             Pinball.transform.position = respawnCheck;
         }

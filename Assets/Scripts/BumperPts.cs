@@ -6,8 +6,10 @@ using UnityEngine;
 public class BumperPts : MonoBehaviour
 {
     [SerializeField] GameObject Bumper;
-    PointsHolder pointsHolder;
     SpriteRenderer spriteRenderer;
+
+    protected GameState gameState;
+
     public int pointsGained = 5;
 
     private enum StateofBumper
@@ -26,6 +28,7 @@ public class BumperPts : MonoBehaviour
         stateofBumper = StateofBumper.open;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.material.color = Color.cyan;
+        gameState = GameObject.FindObjectOfType<GameState>();
     }
 
     // Update is called once per frame
@@ -47,8 +50,9 @@ public class BumperPts : MonoBehaviour
     {
         if (collision.transform.tag == "Pinball" && stateofBumper == StateofBumper.open)
         {
-            timer = 0.5f;
+            timer = 0.1f;
             stateofBumper = StateofBumper.close;
+            gameState.score += pointsGained;
             //pointsHolder.Points += pointsGained;
             //stateofBumper = StateofBumper.close;
         }

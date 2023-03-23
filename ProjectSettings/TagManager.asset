@@ -9,6 +9,7 @@ TagManager:
   - Paddles
   - Bumpers
   - Kickout
+  - GameState
   layers:
   - Default
   - TransparentFX
