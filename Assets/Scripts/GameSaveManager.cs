@@ -17,17 +17,21 @@ public class GameSaveManager : MonoBehaviour
 
     PinballBehaviour pinballBehaviour;
     [SerializeField] GameObject pinball;
-    
+    protected int tempHighscore;
 
     private void Awake()
     {
         desiredPath = Path.Combine(Application.persistentDataPath, "Pinball_Highscore.txt");
+        Debug.Log(desiredPath);
     }
     private void Start()
     {
         gameState = GameObject.FindObjectOfType<GameState>();
+        gameState.nhs = false;
         pinballBehaviour = pinball.GetComponent<PinballBehaviour>();
-        // UI Reference
+        tempHighscore = 0;
+    // UI Reference
+    LoadFromDisk();
     }
     public void LoadFromDisk()
     {
@@ -42,20 +46,38 @@ public class GameSaveManager : MonoBehaviour
     }
     public void SaveToDisk()
     {
+        Debug.Log("Saving...");
         string jsonString = JsonUtility.ToJson(gameState);
         using (StreamWriter streamWriter = File.CreateText(desiredPath))
         {
             streamWriter.Write(jsonString);
+            Debug.Log($"Saved {gameState.highscore}");
         }
     }
 
     void Update()
     {
         Score.text = $"Score\n{gameState.score}";
-        if ()
+        if (gameState.score > gameState.highscore)
         {
-
+            HighScore.text = $"HighScore\n{tempHighscore = gameState.score}";
+        }
+        else
+        {
+            HighScore.text = $"HighScore\n{gameState.highscore}";
         }
         Lives.text = $"Lives\n{pinballBehaviour.RoundsLeft}";
+
+        if (pinballBehaviour.RoundsLeft == 0)
+        {
+            if (tempHighscore > gameState.highscore)
+            {
+                gameState.nhs = true;
+            }
+            else
+            {
+                gameState.nhs = false;
+            }
+        }
     }
 }
