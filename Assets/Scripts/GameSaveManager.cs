@@ -13,7 +13,6 @@ public class GameSaveManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI Score;
     [SerializeField] TextMeshProUGUI HighScore;
-    [SerializeField] TextMeshProUGUI Lives;
 
     PinballBehaviour pinballBehaviour;
     [SerializeField] GameObject pinball;
@@ -26,9 +25,9 @@ public class GameSaveManager : MonoBehaviour
     }
     private void Start()
     {
+
         gameState = GameObject.FindObjectOfType<GameState>();
         gameState.nhs = false;
-        pinballBehaviour = pinball.GetComponent<PinballBehaviour>();
         tempHighscore = 0;
     // UI Reference
     LoadFromDisk();
@@ -47,7 +46,7 @@ public class GameSaveManager : MonoBehaviour
     public void SaveToDisk()
     {
         Debug.Log("Saving...");
-        string jsonString = JsonUtility.ToJson(gameState);
+        string jsonString = JsonUtility.ToJson(gameState, true);
         using (StreamWriter streamWriter = File.CreateText(desiredPath))
         {
             streamWriter.Write(jsonString);
@@ -66,18 +65,23 @@ public class GameSaveManager : MonoBehaviour
         {
             HighScore.text = $"HighScore\n{gameState.highscore}";
         }
-        Lives.text = $"Lives\n{pinballBehaviour.RoundsLeft}";
+        //Lives.text = $"Lives\n{pinballBehaviour.RoundsLeft}";
 
         if (pinballBehaviour.RoundsLeft == 0)
         {
             if (tempHighscore > gameState.highscore)
             {
-                gameState.nhs = true;
+                gameState.highscore = tempHighscore;
             }
-            else
-            {
-                gameState.nhs = false;
-            }
+            //else
+            //{
+            //    gameState.nhs = false;
+            //}
         }
     }
+
+    //public void NewHighScore()
+    //{
+
+    //}
 }

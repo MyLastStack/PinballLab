@@ -5,6 +5,8 @@ using UnityEngine;
 public class PinballBehaviour : MonoBehaviour
 {
     [SerializeField] GameObject Pinball;
+    GameSaveManager gameSaveManager;
+
     Rigidbody2D rb;
     public int RoundsLeft;
     public Vector3 respawnCheck;
@@ -20,6 +22,7 @@ public class PinballBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameSaveManager = GameObject.FindObjectOfType<GameSaveManager>();
         RoundsLeft = 3;
         respawnCheck = new Vector3(2.5f, -1f, 0f);
         timer = 0;
@@ -51,15 +54,16 @@ public class PinballBehaviour : MonoBehaviour
             RoundsLeft--;
             if (RoundsLeft == 0)
             {
+                gameSaveManager.SaveToDisk();
                 Destroy(this.gameObject);
                 GameSceneManager.LoadResults();
             }
             Pinball.transform.position = respawnCheck;
         }
-        if (collision.transform.tag == "Bumper")
-        {
+        //if (collision.transform.tag == "Bumper")
+        //{
             
-        }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
