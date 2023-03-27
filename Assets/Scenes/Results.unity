@@ -536,7 +536,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   highscore: 0
-  nhs: 0
 --- !u!4 &1117470600
 Transform:
   m_ObjectHideFlags: 0
@@ -785,6 +784,7 @@ GameObject:
   - component: {fileID: 1579430965}
   - component: {fileID: 1579430964}
   - component: {fileID: 1579430968}
+  - component: {fileID: 1579430969}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -885,11 +885,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579430963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acb00bebd9a5fff4ba27a43925f2ad98, type: 3}
+  m_Script: {fileID: 11500000, guid: ae4273b216ec38b498211fe5e5939e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YourScore: {fileID: 207064371}
-  BestHighScore: {fileID: 2102804665}
+--- !u!114 &1579430969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579430963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59bbb69290a4ba489fa6ec9978f9b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 207064371}
+  HighScore: {fileID: 2102804665}
 --- !u!1 &2039571673
 GameObject:
   m_ObjectHideFlags: 0

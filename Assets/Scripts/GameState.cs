@@ -7,8 +7,6 @@ public class GameState : MonoBehaviour
     public int score = 0;
     public int highscore = 0;
 
-    public bool nhs;
-
     void Awake()
     {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("GameState");

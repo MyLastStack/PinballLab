@@ -3627,6 +3627,7 @@ GameObject:
   - component: {fileID: 1469506655}
   - component: {fileID: 1469506654}
   - component: {fileID: 1469506658}
+  - component: {fileID: 1469506659}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -3730,10 +3731,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae4273b216ec38b498211fe5e5939e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1469506659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469506653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211f57a1bd4b823478329edef9187bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Score: {fileID: 68090922}
   HighScore: {fileID: 1794739271}
   Lives: {fileID: 487644747}
-  pinball: {fileID: 2071689639}
 --- !u!1 &1529175868
 GameObject:
   m_ObjectHideFlags: 0

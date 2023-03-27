@@ -11,13 +11,6 @@ public class GameSaveManager : MonoBehaviour
     string desiredPath;
     // UI Reference
 
-    [SerializeField] TextMeshProUGUI Score;
-    [SerializeField] TextMeshProUGUI HighScore;
-
-    PinballBehaviour pinballBehaviour;
-    [SerializeField] GameObject pinball;
-    protected int tempHighscore;
-
     private void Awake()
     {
         desiredPath = Path.Combine(Application.persistentDataPath, "Pinball_Highscore.txt");
@@ -25,12 +18,9 @@ public class GameSaveManager : MonoBehaviour
     }
     private void Start()
     {
-
         gameState = GameObject.FindObjectOfType<GameState>();
-        gameState.nhs = false;
-        tempHighscore = 0;
-    // UI Reference
-    LoadFromDisk();
+        // UI Reference
+        LoadFromDisk();
     }
     public void LoadFromDisk()
     {
@@ -56,28 +46,7 @@ public class GameSaveManager : MonoBehaviour
 
     void Update()
     {
-        Score.text = $"Score\n{gameState.score}";
-        if (gameState.score > gameState.highscore)
-        {
-            HighScore.text = $"HighScore\n{tempHighscore = gameState.score}";
-        }
-        else
-        {
-            HighScore.text = $"HighScore\n{gameState.highscore}";
-        }
-        //Lives.text = $"Lives\n{pinballBehaviour.RoundsLeft}";
 
-        if (pinballBehaviour.RoundsLeft == 0)
-        {
-            if (tempHighscore > gameState.highscore)
-            {
-                gameState.highscore = tempHighscore;
-            }
-            //else
-            //{
-            //    gameState.nhs = false;
-            //}
-        }
     }
 
     //public void NewHighScore()
